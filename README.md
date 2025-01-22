@@ -61,3 +61,27 @@ can divide that number by 2 before you get a values hat's less than
 or equal to one.
 
 ---
+
+# Sum of Numbers from 1 to n
+
+## Problem Statement
+Write a function that calculates the sum of all numbers from 1 up to (and including) some other number `n`.
+
+### Examples:
+- `1 to 3` => `1 + 2 + 3` => `6`
+- `1 to 5` => `1 + 2 + 3 + 4 + 5` => `15`
+
+---
+
+## Solution Code
+
+```javascript
+function addUpTo(num) {
+    let total = 0;
+    for (let i = 1; i <= num; i++) {
+        total += i;
+    }
+    return total;
+}
+
+console.log(addUpTo(4)); // Output: 10```
