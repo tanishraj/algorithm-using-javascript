@@ -23,17 +23,17 @@ where we can get the precised timing.
 
 ## RULES OF THUMBS FOR TIME COMPLEXITY:
 
-O(2n) => O(n)
+`O(2n) => O(n)`
 
-O(500) => O(1)
+`O(500) => O(1)`
 
-O(13n^2) => O(n^2)
+`O(13n^2) => O(n^2)`
 
-O(n+10) => O(n)
+`O(n+10) => O(n)`
 
-O(1000n + 50) => O(n)
+`O(1000n + 50) => O(n)`
 
-O(n^2 + 5n +8) => O(n^2)
+`O(n^2 + 5n +8) => O(n^2)`
 
 
 
