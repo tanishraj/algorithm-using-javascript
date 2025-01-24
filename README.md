@@ -186,3 +186,167 @@ function addUpTo(num) {
 
 ### Optimization Recommendation
 Consider using mathematical formula: `n * (n + 1) / 2` for O(1) time complexity
+
+# JavaScript Function Time Complexity
+
+## `logUpTo(n)`
+- **Complexity**: O(n)
+- **Example**:
+```javascript
+function logUpTo(n) {
+    for (var i = 1; i <= n; i++) {
+        console.log(i);
+    }
+}
+logUpTo(5); // Outputs: 1, 2, 3, 4, 5
+```
+
+## `logAtMost10(n)`
+- **Complexity**: O(1)
+- **Example**:
+```javascript
+function logAtMost10(n) {
+    for (var i = 1; i <= Math.min(n, 10); i++) {
+        console.log(i);
+    }
+}
+logAtMost10(3);   // Outputs: 1, 2, 3
+logAtMost10(15);  // Outputs: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+```
+
+## `logAtLeast10(n)`
+- **Complexity**: O(n)
+- **Example**:
+```javascript
+function logAtLeast10(n) {
+    for (var i = 1; i <= Math.max(n, 10); i++) {
+        console.log(i);
+    }
+}
+logAtLeast10(5);   // Outputs: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+logAtLeast10(15);  // Outputs: 1, 2, ..., 15
+```
+
+## `onlyElementsAtEvenIndex(array)`
+- **Complexity**: O(n)
+- **Example**:
+```javascript
+function onlyElementsAtEvenIndex(array) {
+    var newArray = Array(Math.ceil(array.length / 2));
+    for (var i = 0; i < array.length; i++) {
+        if (i % 2 === 0) {
+            newArray[i / 2] = array[i];
+        }
+    }
+    return newArray;
+}
+const arr = [10, 20, 30, 40, 50];
+console.log(onlyElementsAtEvenIndex(arr)); 
+// Outputs: [10, 30, 50]
+```
+
+## `subtotals(array)`
+- **Complexity**: O(n²)
+- **Example**:
+```javascript
+function subtotals(array) {
+    var subtotalArray = Array(array.length);
+    for (var i = 0; i < array.length; i++) {
+        var subtotal = 0;
+        for (var j = 0; j <= i; j++) {
+            subtotal += array[j];
+        }
+        subtotalArray[i] = subtotal;
+    }
+    return subtotalArray;
+}
+const numbers = [1, 2, 3, 4, 5];
+console.log(subtotals(numbers)); 
+// Outputs: [1, 3, 6, 10, 15]
+```
+
+# JavaScript Function Space Complexity Analysis
+
+## `logAtMost10(n)`
+- **Space Complexity**: O(1)
+- **Example**:
+```javascript
+function logAtMost10(n) {
+    for (var i = 1; i <= Math.min(n, 10); i++) {
+        console.log(i);
+    }
+}
+// Constant space usage regardless of input
+```
+
+## `onlyElementsAtEvenIndex(array)`
+- **Space Complexity**: O(n)
+- **Example**:
+```javascript
+function onlyElementsAtEvenIndex(array) {
+    var newArray = Array(Math.ceil(array.length / 2));
+    for (var i = 0; i < array.length; i++) {
+        if (i % 2 === 0) {
+            newArray[i / 2] = array[i];
+        }
+    }
+    return newArray;
+}
+// Space grows linearly with input array size
+```
+
+## `subtotals(array)`
+- **Space Complexity**: O(n)
+- **Example**:
+```javascript
+function subtotals(array) {
+    var subtotalArray = Array(array.length);
+    for (var i = 0; i < array.length; i++) {
+        var subtotal = 0;
+        for (var j = 0; j <= i; j++) {
+            subtotal += array[j];
+        }
+        subtotalArray[i] = subtotal;
+    }
+    return subtotalArray;
+}
+// Creates new array same size as input array
+```
+
+## `logUpTo(n)`
+- **Space Complexity**: O(1)
+- **Example**:
+```javascript
+function logUpTo(n) {
+    for (var i = 1; i <= n; i++) {
+        console.log(i);
+    }
+}
+// Constant space usage with single variable
+```
+
+## Key Insights
+- Constant loop variables: O(1) space
+- Creating new arrays: O(n) space
+- Nested loops don't always mean O(n²) space
+
+# Big O Complexity: JavaScript Array Operations
+
+## Time Complexity Breakdown
+
+| Operation | Time Complexity | Description |
+|-----------|-----------------|-------------|
+| `push()` | O(1) | Add element to end |
+| `pop()` | O(1) | Remove element from end |
+| `shift()` | O(N) | Remove element from beginning |
+| `unshift()` | O(N) | Add element to beginning |
+| `concat()` | O(N) | Merge arrays |
+| `slice()` | O(N) | Extract array portion |
+| `splice()` | O(N) | Modify array contents |
+| `sort()` | O(N * log N) | Sort array elements |
+| `forEach/map/filter/reduce` | O(N) | Iterate through array |
+
+## Performance Considerations
+- Operations at the end of array are fastest
+- Operations at the beginning require shifting elements
+- Sorting is more time-consuming than simple iterations
