@@ -87,3 +87,39 @@ function addUpTo(num) {
 console.log(addUpTo(4)); // Output: 10
 ```
 
+# Sum Up To Function
+
+## Description
+A simple JavaScript function that calculates the sum of all numbers from 1 up to a given number `n` using the mathematical formula `n * (n + 1) / 2`.
+
+## Function Signature
+```javascript
+function appUpTo2(n)
+```
+
+### Parameters
+- `n`: The upper limit of numbers to sum (inclusive)
+
+### Returns
+- The total sum of all integers from 1 to `n`
+
+## Examples
+```javascript
+appUpTo2(10); // Returns 55
+appUpTo2(3);  // Returns 6
+appUpTo2(5);  // Returns 15
+```
+
+## Mathematical Formula
+The function uses the arithmetic series sum formula: 
+`Sum = n * (n + 1) / 2`
+
+## Usage
+```javascript
+const total = appUpTo2(10);
+console.log(total); // Outputs 55
+```
+
+## Performance
+This method is more efficient than using a loop, with O(1) time complexity.
+
