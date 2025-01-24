@@ -123,3 +123,41 @@ console.log(total); // Outputs 55
 ## Performance
 This method is more efficient than using a loop, with O(1) time complexity.
 
+# Sum Up To Function (Loop-based)
+
+## Description
+A JavaScript function that calculates the sum of all numbers from 1 up to a given number using a `for` loop.
+
+## Function Signature
+```javascript
+function addUpTo(num)
+```
+
+### Parameters
+- `num`: The upper limit of numbers to sum (inclusive)
+
+### Returns
+- The total sum of all integers from 1 to `num`
+
+## Performance Timing
+The code includes performance measurement using `performance.now()` to track execution time.
+
+## Example Usage
+```javascript
+const total = addUpTo(1000000000);
+console.log(total);
+
+// Timing example
+var t1 = performance.now();
+addUpTo(1000000000);
+var t2 = performance.now();
+console.log(`Time elapsed: ${(t2 - t1) / 1000} seconds.`);
+```
+
+## Time Complexity
+- O(n) due to the linear loop
+- Slower compared to the mathematical formula approach
+
+## Notes
+- Suitable for understanding summation through iteration
+- Less efficient for large numbers
