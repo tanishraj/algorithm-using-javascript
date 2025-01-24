@@ -161,3 +161,28 @@ console.log(`Time elapsed: ${(t2 - t1) / 1000} seconds.`);
 ## Notes
 - Suitable for understanding summation through iteration
 - Less efficient for large numbers
+
+# Sum Function Performance Analysis
+
+## Implementation
+```javascript
+function addUpTo(num) {
+    let total = 0;
+    for(let i = 1; i <= num; i++) {
+        total += i;
+    }
+    return total;
+}
+```
+
+## Performance Characteristics
+- **Time Complexity**: O(n)
+- **Space Complexity**: O(1)
+- **Scalability**: Inefficient for large numbers
+
+## Benchmarking
+- Test Case: `addUpTo(1000000000)`
+- Measures execution time using `performance.now()`
+
+### Optimization Recommendation
+Consider using mathematical formula: `n * (n + 1) / 2` for O(1) time complexity
