@@ -25,5 +25,25 @@ works.
 There are many different ways to sort things, and different 
 techniques have their own advantages and disadvantages.
 
+
+List of Sorting Algorithms:
+-------------------------------
+Name 	        Time Complexity     (Average)	    Space Complexity    Stable?	Method
+Bubble Sort	    O(n^2)	            O(1)	        Yes	                Exchanging
+Selection Sort  O(n^2)	            O(1)	        No	                Selection
+Insertion Sort	O(n^2)	            O(1)	        Yes	                Insertion
+Merge Sort	    O(nlogn)	        O(n)	        Yes	                Merging
+Quicksort	    O(nlogn)	        O(logn)         No	                Partitioning
+Heapsort	    O(nlogn)	        O(1)	        No	                Selection
+Counting Sort	O(n+k)	            O(n+k)	        Yes	                Counting
+Radix Sort	    O(n+k)	            O(n+k)	        Yes	                Distribution
+COcktail Sort (Bi-directional Bubble Sort)
+Gnome Sort (Similar to insertion)
+Bitonic Sort (Parallel Sort)
+Bogo Sort (inefficient random)
+Shell Sort (Diminishing increment)
+Comb Sort (improved bubble)
+Counting Sort (Non Comparison)
+Bucket Sort (Distribution Based)
 ================================================================
 */
